@@ -1,3 +1,13 @@
+# Started with the following ChatGPT prompt:
+# write a script that predicts stock price direction over the next few days
+
+# Install Python
+#https://www.python.org/downloads/
+
+# Install packages from command line
+#pip install pandas scikit-learn yfinance
+
+
 # Import necessary libraries
 import yfinance as yf
 import pandas as pd
@@ -29,9 +39,9 @@ def train_svm(X_train, y_train):
 # Main function
 def main():
     # Define the stock and date range
-    ticker = 'ORCL'  
+    ticker = 'MSTR'  
     start_date = '2023-01-01'
-    end_date = '2023-10-13'
+    end_date = '2023-12-31'
 
     # Get historical stock data
     stock_data = get_stock_data(ticker, start_date, end_date)

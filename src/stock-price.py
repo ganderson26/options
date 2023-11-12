@@ -1,3 +1,7 @@
+# Started with the following ChatGPT prompt:
+# write a script that predicts stock price over the next few days
+
+
 # Install Python
 #https://www.python.org/downloads/
 
@@ -49,12 +53,12 @@ def predict_stock_price(ticker, start_date, end_date, prediction_days):
 # Example usage
 if __name__ == "__main__":
     # Ticker symbol of the stock you want to predict
-    ticker = "ORCL"
+    ticker = "MSTR"
     # Date range for historical data (format: "YYYY-MM-DD")
     start_date = "2023-01-01"
-    end_date = "2023-10-09"
+    end_date = "2023-11-13"
     # Number of days to predict into the future
-    prediction_days = 5
+    prediction_days = 50
     
     # Predict stock prices
     predicted_prices = predict_stock_price(ticker, start_date, end_date, prediction_days)
