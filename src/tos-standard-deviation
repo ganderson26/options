@@ -1,0 +1,29 @@
+# Calculate 1 Standard Deviation
+# Display in Watchlist
+
+# Get Implied Volatility for ease of use
+def iv = imp_volatility();
+
+# Trading days in a year
+def timePeriod = 252; 
+
+# This just color codes the display
+def data = if !isNaN(iv) then iv else iv[-1];
+def hi = highest(data, TimePeriod);
+def lo = lowest(data, TimePeriod);
+plot Percentile = (data - lo) / (hi - lo) * 100;
+def lowend = Percentile < 25;
+def highend = Percentile > 50;
+
+# Calculate Standard Deviations
+
+# This is a common way I see onlime 
+def dailySD = (iv / Sqrt(252)) * close;
+def monthlySD = (iv / Sqrt(12)) * close;
+def weeklySD = (iv / Sqrt(52)) * close;
+
+# Why not use the thinkScript function?
+def dteSD = StDev(close, 10);
+
+# Display
+AddLabel(yes, Concat("+/- $", Astext (dteSD, NumberFormat.TWO_DECIMAL_PLACES)), if lowend then color.red else if highend then color.green else color.yellow); ;

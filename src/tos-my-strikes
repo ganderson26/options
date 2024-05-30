@@ -1,0 +1,40 @@
+input W = "W";
+input ALB = "ALB";
+input ROKU = "ROKU";
+input DELL = "DELL";
+
+def WStrike = 61.00;
+def ALBStrike = 0.00;
+def ROKUStrike = 58.00;
+def DELLStrike = 145.00;
+
+Addlabel(1, if GetSymbol() == W then WStrike
+ else if GetSymbol() == ALB then ALBStrike
+ else if GetSymbol() == ROKU then ROKUStrike
+ else if GetSymbol() == DELL then DELLStrike
+ else 0.0, 
+ color.BLACK);
+
+AssignBackgroundColor(
+  if GetSymbol() == W then 
+    if WStrike < close then color.GREEN 
+    else if WStrike > close then color.RED
+    else color.BLACK
+  else
+  if GetSymbol() == ALB then 
+    if ALBStrike < close then color.GREEN 
+    else if ALBStrike > close then color.RED
+    else color.BLACK
+  else
+  if GetSymbol() == ROKU then 
+    if ROKUStrike < close then color.GREEN 
+    else if ROKUStrike > close then color.RED
+    else color.BLACK
+ else
+  if GetSymbol() == DELL then 
+    if DELLStrike < close then color.GREEN 
+    else if DELLStrike > close then color.RED
+    else color.BLACK
+
+  else color.BLACK);
+

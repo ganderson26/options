@@ -53,18 +53,19 @@ def predict_stock_price(ticker, start_date, end_date, prediction_days):
 # Example usage
 if __name__ == "__main__":
     # Ticker symbol of the stock you want to predict
-    ticker = "MSTR"
+    ticker = "DELL"
     # Date range for historical data (format: "YYYY-MM-DD")
-    start_date = "2023-01-01"
-    end_date = "2023-11-13"
+    start_date = "2024-01-01"
+    end_date = "2024-05-24"
     # Number of days to predict into the future
-    prediction_days = 50
+    prediction_days = 5
     
     # Predict stock prices
     predicted_prices = predict_stock_price(ticker, start_date, end_date, prediction_days)
     
     # Print the predicted prices for the next 'prediction_days' days
-    print(ticker + f" Prediction for the next {prediction_days} days starting " + end_date)
+    print(ticker + f" Prediction for the next {prediction_days} days starting " + start_date + " and ending " + end_date)
 
     for i in range(prediction_days):
         print(f"Predicted price for Day {i+1}: {predicted_prices[i]}")
+        print(f"Predicted price for Day {prediction_days}: {predicted_prices[i]}")

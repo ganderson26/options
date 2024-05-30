@@ -19,6 +19,7 @@ from sklearn.metrics import accuracy_score
 # Function to get historical stock data
 def get_stock_data(ticker, start_date, end_date):
     data = yf.download(ticker, start=start_date, end=end_date)
+    print(data)
     return data
 
 # Function to prepare the data for training and testing
@@ -39,9 +40,9 @@ def train_svm(X_train, y_train):
 # Main function
 def main():
     # Define the stock and date range
-    ticker = 'MSTR'  
-    start_date = '2023-01-01'
-    end_date = '2023-12-31'
+    ticker = 'DELL'  
+    start_date = '2024-05-01'
+    end_date = '2024-05-31'
 
     # Get historical stock data
     stock_data = get_stock_data(ticker, start_date, end_date)

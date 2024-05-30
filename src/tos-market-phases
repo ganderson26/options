@@ -1,0 +1,39 @@
+# Determine Market Phase
+# Display in Watchlist
+
+# Ease of use
+def price = close;
+def fastavg = 50;
+def slowavg = 200;
+
+def fastsma = Average(price, fastavg);
+def slowsma = Average(price, slowavg);
+
+# Bullish criteria define below
+# Bullish Phase : close > 50 SMA, close > 200 SMA, 50 SMA > 200 SMA
+def bullphase = fastsma > slowsma && price > fastsma && price > slowsma;
+
+# Accumulation Phase : close > 50 SMA, close > 200 SMA, 50 SMA < 200 SMA
+def accphase = fastsma < slowsma && price > fastsma && price > slowsma;
+
+# Recovery Phase : close > 50 SMA, close < 200 SMA, 50 SMA < 200 SMA
+def recphase = fastsma < slowsma && price < slowsma && price > fastsma;
+
+# Bearish Criteria define below
+# Bearish Phase : close < 50 SMA, close < 200 SMA, 50 SMA < 200 SMA
+def bearphase = fastsma < slowsma && price < fastsma && price < slowsma;
+
+# Distribution Phase : close < 50 SMA, close < 200 SMA, 50 SMA > 200 SMA
+def distphase = fastsma > slowsma && price < fastsma && price < slowsma;
+
+# Warning Phase : close < 50 SMA, close > 200 SMA, 50 SMA > 200 SMA
+def warnphase = fastsma > slowsma && price > slowsma && price < fastsma;
+
+# Display
+AddLabel(bullphase, " Bull Phase" , if bullphase is true then Color.GREEN else Color.BLACK);
+AddLabel(accphase, " Accumation Phase ", if accphase is true then Color.lIGHT_GREEN else Color.BLACK);
+AddLabel(recphase, " Recovery Phase ", if recphase is true then Color.lIGHT_ORANGE else Color.BLACK);
+AddLabel(warnphase, " Warning Phase ", if warnphase is true then Color.orANGE else Color.BLACK);
+AddLabel(distphase, " Distribution Phase ", if distphase is true then Color.light_red else Color.BLACK);
+AddLabel(bearphase, " Bear Phase ", if bearphase is true then Color.red else Color.BLACK);
+
