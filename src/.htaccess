@@ -1,0 +1,9 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/jejtxlk4zmlg/options"
+PassengerBaseURI "/"
+PassengerPython "/home/jejtxlk4zmlg/options/env/lib/python3.12"
+PassengerAppLogFile "/home/jejtxlk4zmlg/options/logs/app.log"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+
+# Turn off directory index if necessary
+Options -Indexes

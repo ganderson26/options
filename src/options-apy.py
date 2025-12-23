@@ -3,7 +3,7 @@ from datetime import date
 
 # Read a CSV file into a DataFrame
 # Make sure to clean up the csv removing all but the options data
-df = pd.read_csv('2024-05-20-AccountStatement.csv')
+df = pd.read_csv('2024-11-28-AccountStatement.csv')
 print(df.head())
 
 # Remove all rows where TYPE != TRD

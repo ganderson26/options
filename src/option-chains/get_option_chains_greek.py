@@ -67,8 +67,11 @@ def get_option_chains():
         # Get all chains for expiration dates
         expiration_dates = ticker.options
 
-        # Get current expiration
-        expiration_date = expiration_dates[0]
+        # Assuming this is running the Friday before, use next expiration date
+        # Get next expiration
+        expiration_date = expiration_dates[1]
+        print("expiration date:", expiration_date)
+
         option_chain = ticker.option_chain(expiration_date)
 
         # Create a DataFrame for calls and puts
@@ -380,6 +383,7 @@ save_to_mysql(option_chains_df)
 current_date = datetime.datetime.now().strftime("%Y-%m-%d:%H-%M-%S")
 
 # Write to log file when run as cron job
+# Write to console when run from terminal
 print("Option Chain Successfully Loaded", current_date)
 
 

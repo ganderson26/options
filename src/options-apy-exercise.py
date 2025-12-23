@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 ## Read a CSV file into a DataFrame
 # Contains various TYPES such as BAL, DOI and TRD
-df = pd.read_csv('2024-04-27-AccountStatement.csv')
+df = pd.read_csv('2023-12-31-AccountStatement.csv')
 
 ## Viewing Data
 #print(df.head())
@@ -23,8 +23,9 @@ df = pd.read_csv('2024-04-27-AccountStatement.csv')
 ## Remove all rows where TYPE != TRD
 # Very odd issue dropping the first amount due to type = BAL? I changed the TYPE to TRD on the row.
 # This emphasizes the need to understand the data
-#df = df[df["TYPE"].str.contains("TRD") == True]
+df = df[df["TYPE"].str.contains("TRD") == True]
 #print(df.head())
+
 
 ## Now there are only Trade rows
 
@@ -60,6 +61,9 @@ df['AMOUNT'] = [float(str(i).replace(',', '')) for i in df['AMOUNT']]
 df['AMOUNT_RECAST'] = df['AMOUNT'].astype(float)
 #print(df['AMOUNT_RECAST'])
 
+
+df.to_csv('latest.csv')
+
 ## Group By MONTH and AMOUNT
 df['monthly'] = df.groupby(df['month'])['AMOUNT_RECAST'].sum()
 #print(df['monthly'])
@@ -72,7 +76,7 @@ number_of_days = 31
 # rate = 1 + (total/investment_amount)
 # days = days_in_year/number_of_days
 # apy = ((rate to the power of days) -1) * 100
-investment_amount = 50000.00
+investment_amount = 30000.00
 rate = 1 + (df['monthly'] / investment_amount)
 
 # Get days value for Timedelta number_of_days variable

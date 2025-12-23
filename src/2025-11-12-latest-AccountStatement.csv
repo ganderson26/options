@@ -1,0 +1,104 @@
+﻿Account Statement for 95766522SCHW (Options) since 11/5/25 through 11/11/25
+
+Cash Balance
+DATE,TIME,TYPE,REF #,DESCRIPTION,Misc Fees,Commissions & Fees,AMOUNT,BALANCE
+11/6/25,00:00:00,BAL,,Cash balance at the start of business day 06.11 CST,,,,"82,658.17"
+11/6/25,08:30:01,TRD,1004576002377,BOT +1 MU 100 (Weeklys) 7 NOV 25 202.5 PUT @.14 PHLX,-0.01,-0.65,-14.00,"82,643.51"
+11/6/25,08:30:06,TRD,1004571297642,BOT +1 MU 100 (Weeklys) 7 NOV 25 200 PUT @.11 CBOE,-0.01,-0.65,-11.00,"82,631.85"
+11/7/25,00:00:00,BAL,,Cash balance at the start of business day 07.11 CST,,,,"82,631.85"
+11/7/25,11:46:49,TRD,1004632621835,SOLD -1 MU 100 (Weeklys) 14 NOV 25 200 PUT @1.07 CBOE,-0.01,-0.65,107.00,"82,738.19"
+11/7/25,11:48:56,TRD,1004632621960,SOLD -1 BE 100 (Weeklys) 14 NOV 25 100 PUT @1.18 PHLX,-0.01,-0.65,118.00,"82,855.53"
+11/7/25,11:55:49,TRD,1004633302332,SOLD -1 MU 100 (Weeklys) 14 NOV 25 200 PUT @1.11 MIAX,-0.01,-0.65,111.00,"82,965.87"
+11/8/25,00:00:00,BAL,,Cash balance at the start of business day 08.11 CST,,,,"82,965.87"
+11/9/25,00:00:00,BAL,,Cash balance at the start of business day 09.11 CST,,,,"82,965.87"
+11/10/25,00:00:00,BAL,,Cash balance at the start of business day 10.11 CST,,,,"82,965.87"
+11/10/25,11:02:24,TRD,1004633302333,BOT +1 MU 100 (Weeklys) 14 NOV 25 200 PUT @.10 CBOE,-0.01,-0.65,-10.00,"82,955.21"
+11/10/25,14:24:40,TRD,1004650538918,SOLD -1 BE 100 (Weeklys) 14 NOV 25 120 PUT @1.63 CBOE,-0.01,-0.65,163.00,"83,117.55"
+11/10/25,14:28:12,TRD,1004650539086,SOLD -1 AMD 100 (Weeklys) 14 NOV 25 225 PUT @1.26 CBOE,-0.01,-0.65,126.00,"83,242.89"
+11/10/25,14:38:16,TRD,1004650539569,SOLD -1 BE 100 (Weeklys) 14 NOV 25 115 PUT @.94 BOX,-0.01,-0.65,94.00,"83,336.23"
+11/11/25,00:00:00,BAL,,Cash balance at the start of business day 11.11 CST,,,,"83,336.23"
+11/11/25,08:38:09,TRD,1004632621836,BOT +1 MU 100 (Weeklys) 14 NOV 25 200 PUT @.10 CBOE,-0.01,-0.65,-10.00,"83,325.57"
+11/11/25,11:25:10,TRD,1004657292103,SOLD -1 AMD 100 (Weeklys) 14 NOV 25 220 PUT @1.00 CBOE,-0.01,-0.65,100.00,"83,424.91"
+11/12/25,00:00:00,BAL,,Cash balance at the start of business day 12.11 CST,,,,"83,424.91"
+11/12/25,08:30:11,TRD,1004657292104,BOT +1 AMD 100 (Weeklys) 14 NOV 25 220 PUT @.10 CBOE,-0.01,-0.65,-10.00,"83,414.25"
+11/12/25,08:33:09,TRD,1004650539087,BOT +1 AMD 100 (Weeklys) 14 NOV 25 225 PUT @.13 CBOE,-0.01,-0.65,-13.00,"83,400.59"
+11/12/25,12:11:08,TRD,1004669623085,SOLD -1 MU 100 (Weeklys) 14 NOV 25 230 PUT @.89 CBOE,-0.01,-0.65,89.00,"83,488.93"
+11/12/25,12:23:29,TRD,1004669623639,SOLD -1 AMD 100 (Weeklys) 14 NOV 25 245 PUT @1.31 CBOE,-0.01,-0.65,131.00,"83,619.27"
+,,,,TOTAL,($0.15),($9.75),$971.00,"$83,619.27"
+
+Futures Statements
+Trade Date,Exec Date,Exec Time,Type,Ref #,Description,Misc Fees,Commissions & Fees,Amount,Balance
+11/6/25,11/6/25,00:00:00,BAL,--,Futures cash balance at the start of business day 06.11 CST,--,--,--,0.00
+11/7/25,11/7/25,00:00:00,BAL,--,Futures cash balance at the start of business day 07.11 CST,--,--,--,0.00
+11/8/25,11/8/25,00:00:00,BAL,--,Futures cash balance at the start of business day 08.11 CST,--,--,--,0.00
+11/9/25,11/9/25,00:00:00,BAL,--,Futures cash balance at the start of business day 09.11 CST,--,--,--,0.00
+11/10/25,11/10/25,00:00:00,BAL,--,Futures cash balance at the start of business day 10.11 CST,--,--,--,0.00
+11/11/25,11/11/25,00:00:00,BAL,--,Futures cash balance at the start of business day 11.11 CST,--,--,--,0.00
+11/12/25,11/12/25,00:00:00,BAL,--,Futures cash balance at the start of business day 12.11 CST,--,--,--,0.00
+
+Forex Statements
+,Date,Time,Type,Ref #,Description,Commissions & Fees,Amount,Amount(USD),Balance
+
+Crypto (trading provided by Schwab Digital Assets) Statements
+Trade Date,Exec Date,Exec Time,Type,Ref #,Description,Commissions & Fees,Amount,Balance
+
+ 
+"Total Cash $83,619.27"
+
+
+Account Order History filtered by AMD
+Notes,,Time Placed,Spread,Side,Qty,Pos Effect,Symbol,Exp,Strike,Type,PRICE,,TIF,Status
+,,11/12/25 12:23:29,SINGLE,SELL,-1,TO OPEN,AMD,14 NOV 25,245,PUT,1.31,LMT,DAY,FILLED
+,,11/12/25 12:23:29,SINGLE,BUY,+1,TO CLOSE,AMD,14 NOV 25,245,PUT,.13,LMT,GTC,WORKING
+,,,TRG BY #1004669623639,,,,,,,,,,,
+,,11/11/25 10:48:31,SINGLE,SELL,-1,TO OPEN,AMD,14 NOV 25,220,PUT,1.00,LMT,DAY,FILLED
+,,11/11/25 10:48:31,SINGLE,BUY,+1,TO CLOSE,AMD,14 NOV 25,220,PUT,.10,LMT,GTC,FILLED
+,,,TRG BY #1004657292103,,,,,,,,,,,
+,,11/10/25 14:28:11,SINGLE,SELL,-1,TO OPEN,AMD,14 NOV 25,225,PUT,1.26,LMT,DAY,FILLED
+,,11/10/25 14:28:11,SINGLE,BUY,+1,TO CLOSE,AMD,14 NOV 25,225,PUT,.13,LMT,GTC,FILLED
+,,,TRG BY #1004650539086,,,,,,,,,,,
+
+Account Trade History filtered by AMD
+,Exec Time,Spread,Side,Qty,Pos Effect,Symbol,Exp,Strike,Type,Price,Net Price,Order Type
+,11/12/25 12:23:29,SINGLE,SELL,-1,TO OPEN,AMD,14 NOV 25,245,PUT,1.31,1.31,LMT
+,11/12/25 08:33:09,SINGLE,BUY,+1,TO CLOSE,AMD,14 NOV 25,225,PUT,.13,.13,LMT
+,11/12/25 08:30:11,SINGLE,BUY,+1,TO CLOSE,AMD,14 NOV 25,220,PUT,.10,.10,LMT
+,11/11/25 11:25:10,SINGLE,SELL,-1,TO OPEN,AMD,14 NOV 25,220,PUT,1.00,1.00,LMT
+,11/10/25 14:28:12,SINGLE,SELL,-1,TO OPEN,AMD,14 NOV 25,225,PUT,1.26,1.26,LMT
+
+Options
+Symbol,Option Code,Exp,Strike,Type,Qty,Trade Price,Mark,Mark Value
+BE,BE251114P100,14 NOV 25,100,PUT,-1,1.18,.275,($27.50)
+BE,BE251114P115,14 NOV 25,115,PUT,-1,.94,1.625,($162.50)
+BE,BE251114P120,14 NOV 25,120,PUT,-1,1.63,2.875,($287.50)
+MU,MU251114P230,14 NOV 25,230,PUT,-1,.89,.915,($91.50)
+AMD,AMD251114P245,14 NOV 25,245,PUT,-1,1.31,1.28,($128.00)
+,OVERALL TOTALS,,,,,,,($697.00)
+
+Profits and Losses
+Symbol,Description,P/L Open,P/L %,P/L Day,P/L YTD,P/L Diff,Mark Value
+AAPL,APPLE INC,$0.00,0.00%,$0.00,$375.00,$0.00,$0.00
+AMD,ADVANCED MICRO DEVIC,$3.00,+2.29%,$199.00,$206.00,$206.00,($128.00)
+BE,BLOOM ENERGY CORP A,($104.48),-28.01%,$24.31,$19.50,($102.50),($477.50)
+COIN,COINBASE GLOBAL INC A,$0.00,0.00%,$0.00,$180.00,$0.00,$0.00
+GOOGL,ALPHABET INC A,$0.00,0.00%,$0.00,$133.00,$0.00,$0.00
+HIMS,HIMS & HERS HEALTH I A,$0.00,0.00%,$0.00,$328.00,$0.00,$0.00
+MSTR,STRATEGY INC A,$0.00,0.00%,$0.00,"$2,330.00",$0.00,$0.00
+MU,MICRON TECHNOLOGY IN,($2.50),-2.81%,($2.50),$532.50,$195.50,($91.50)
+NVDA,NVIDIA CORP,$0.00,0.00%,$0.00,$125.00,$0.00,$0.00
+OKLO,OKLO INC A,$0.00,0.00%,$0.00,$78.00,$0.00,$0.00
+ORCL,ORACLE CORP,$0.00,0.00%,$0.00,$171.00,$0.00,$0.00
+PLTR,PALANTIR TECHNOLOGIE Class A,$0.00,0.00%,$0.00,"$1,811.02",$0.00,$0.00
+RDDT,REDDIT INC A,$0.00,0.00%,$0.00,"($2,558.00)",$0.00,$0.00
+SHOP,SHOPIFY INC Class A,$0.00,0.00%,$0.00,($62.00),$0.00,$0.00
+W,WAYFAIR INC A,$0.00,0.00%,$0.00,$724.00,$0.00,$0.00
+,OVERALL TOTALS,($103.98),-17.53%,$220.81,"$4,393.02",$299.00,($697.00)
+
+Account Summary
+Net Liquidating Value,"$82,922.27"
+Stock Buying Power,"$8,730.90"
+Option Buying Power,"$2,619.27"
+Equity Commissions & Fees YTD,$137.50
+Futures Commissions & Fees YTD,$0.00
+Crypto Trading Fees YTD,N/A
+Total Commissions & Fees YTD,$137.50

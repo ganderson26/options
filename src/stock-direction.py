@@ -40,7 +40,7 @@ def train_svm(X_train, y_train):
 # Main function
 def main():
     # Define the stock and date range
-    ticker = 'DELL'  
+    ticker = 'AAPL'  
     start_date = '2024-05-01'
     end_date = '2024-05-31'
 

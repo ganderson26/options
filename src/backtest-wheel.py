@@ -24,16 +24,23 @@ def backtest_strategy(cash, std_dev_num, trade_days, ticker, start_date, end_dat
     # Get historical stock data
     stock_prices = get_stock_data(ticker, start_date, end_date)
 
+    print(stock_prices)
+
     # Calculate daily returns
     daily_returns = stock_prices.pct_change()
 
     # Calculate 1 standard deviation
     std_dev = daily_returns.std()
 
+    print(std_dev)
+
     # Set up initial parameters
-    put_strike = stock_prices[-1] * (std_dev_num - std_dev)  # Put strike at standard deviation below current price
-    call_strike = stock_prices[-1] * (std_dev_num + std_dev)  # Call strike at standard deviation above current price
+    put_strike = stock_prices[::-1] * (std_dev_num - std_dev)  # Put strike at standard deviation below current price
+    call_strike = stock_prices[::-1] * (std_dev_num + std_dev)  # Call strike at standard deviation above current price
     positions = []
+
+    print('HERE')
+    print(put_strike)
     
     # Backtest the strategy
     for i in range(len(stock_prices)):
@@ -41,32 +48,37 @@ def backtest_strategy(cash, std_dev_num, trade_days, ticker, start_date, end_dat
             # Sell put option
             put_option_price = max(put_strike - stock_prices[i], 0)
 
-            option_chain = yf.Ticker(ticker_symbol).option_chain(put_option_price)
-            print(option_chain)
+            print(put_option_price)
 
-            cash -= put_option_price
-            positions.append(-1)
+            #option_chain = yf.Ticker(ticker_symbol).option_chain(put_option_price)
+            # Get data from database
+           
+            #print(option_chain)
+
+            #cash -= put_option_price
+            #positions.append(-1)
             
 
             # Check if put option is assigned
-            if stock_prices[i] < put_strike:
-                # If assigned, sell call option
-                call_option_price = max(stock_prices[i] - call_strike, 0)
-                cash += call_option_price
-                positions[-1] += 1
+            #if stock_prices[i] < put_strike:
+            #    # If assigned, sell call option
+            #    call_option_price = max(stock_prices[i] - call_strike, 0)
+            #    cash += call_option_price
+            #    positions[-1] += 1
 
     # Calculate final portfolio value
-    final_value = cash + sum([pos * stock_prices.iloc[-1] for pos in positions])
+    #final_value = cash + sum([pos * stock_prices.iloc[-1] for pos in positions])
 
-    return final_value
+    #return final_value
+    return 0
 
 # Define parameters
 cash = 100000  # Initial cash amount
 std_dev_num = 1
 trade_days = 21
 ticker_symbol = 'AAPL'
-start_date = '2019-01-01'
-end_date = '2020-01-01'
+start_date = '2025-08-27'
+end_date = '2025-08-27'
 
 # Backtest the strategy
 portfolio_value = backtest_strategy(cash, std_dev_num, trade_days, ticker_symbol, start_date, end_date)

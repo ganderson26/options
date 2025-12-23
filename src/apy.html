@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APY Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>APY Calculator</h1>
+        <label for="premiums">Total Premiums Earned</label>
+        <input type="number" id="premiums" step="0.01" placeholder="Enter premiums earned">
+
+        <label for="number_of_days">Number of Days</label>
+        <input type="number" id="number_of_days" placeholder="Enter number of days">
+        
+        <label for="investment">Investment Amount</label>
+        <input type="number" id="investment" placeholder="Enter investment amount">
+        
+        <button onclick="calculateAPY()">Calculate APY</button>
+        
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateAPY() {
+            let premiums = parseFloat(document.getElementById('premiums').value);
+            let number_of_days = parseInt(document.getElementById('number_of_days').value);
+            let investment = parseInt(document.getElementById('investment').value);
+
+            if (isNaN(premiums) || isNaN(number_of_days) || isNaN(investment) || premiums < 0 || number_of_days <= 0 || investment < 0) {
+                alert("Please enter valid values.");
+                return;
+            }
+
+            let rate = 1 + (premiums / investment)
+
+            let days_in_year = 365
+            let days = days_in_year / number_of_days
+            let apy = ((Math.pow(rate, days)) - 1) * 100
+
+            document.getElementById('result').innerText = `The APY is ${apy.toFixed(2)}%`;
+        }
+    </script>
+</body>
+</html>

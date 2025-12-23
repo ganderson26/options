@@ -9,7 +9,7 @@ from datetime import date
 
 ## Read a CSV file into a DataFrame
 # Contains various TYPES such as BAL, DOI and TRD
-df = pd.read_csv('2024-04-27-AccountStatement.csv')
+df = pd.read_csv('2024-06-20-AccountStatement.csv')
 
 ## Viewing Data
 #print(df.head())
