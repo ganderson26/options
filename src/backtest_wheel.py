@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 # ---------------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------------
-SYMBOL = 'AAPL '
+SYMBOL = 'MSFT'
 PATTERN_CHARACTER_LENGTH = '10' # 11 for 5 character symbols like GOOGL
 
 SUSPEND_PUTS = False
@@ -515,15 +515,36 @@ def main():
     # RESULTS
     # -------------------------
     
+    total_trades = len(premiums_df) 
+    number_of_days = total_trades * 7
+    puts_net = premiums_df["close_net"].sum()
+    calls_net = premiums_df["calls_bid"].sum() * 100
+    current_price_avg = premiums_df["currentPrice"].sum() / total_trades
+    premiums = puts_net + calls_net
+    
+    investment = current_price_avg * 100
+    rate = 1 + (premiums / investment)
+    days_in_year = 365
+    days = days_in_year / number_of_days
+    apy = ((pow(rate, days)) - 1) * 100
+
+    numberOfYears = number_of_days / days_in_year;
+    cagr = ((premiums / investment) ** (1 / numberOfYears) - 1) * 100;
+
     print(ATM_SPREAD + " PUT Wheel Strategy for " + SYMBOL + " from Option Chain History from " + TRADE_DATE_START + " to " + TRADE_DATE_END )
     print("Assumes you can sell at the Expiration Price")
-    print("Total Trades:", len(premiums_df))
-    puts_net = premiums_df["close_net"].sum()
+    print("Total Trades:", total_trades)
+    
     print("Total Close PnL:", puts_net)
 
-    calls_net = premiums_df["calls_bid"].sum() * 100
     print("Total Calls PnL:", calls_net)
-    print("Total PnL:", puts_net + calls_net)
+    print("Total PnL:", premiums)
+
+    print('Total Number of Trade Days:', number_of_days)
+    print('Avg Current Average Price:', current_price_avg)
+    print("ROI (Total PnL / Current Average Price):", premiums / current_price_avg)
+    print("APY:", apy)
+    print("CAGR:", cagr)
 
     print("")
     print("Option Chain")

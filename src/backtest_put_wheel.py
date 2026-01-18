@@ -55,7 +55,7 @@ def load_data():
     engine = create_engine(db_connection)
 
     # Get all rows from table
-    sql_query = "SELECT * FROM OPTION_CHAINS"
+    sql_query = "SELECT * FROM OPTION_CHAINS_2SD"
     df = pd.read_sql(sql_query, con=engine)
     
     return df

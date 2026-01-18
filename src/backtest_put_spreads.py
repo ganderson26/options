@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 # ---------------------------------------------------------------------------------
 # CONFIG
 # ---------------------------------------------------------------------------------
-SYMBOL = 'AMZN'
+SYMBOL = 'AAPL'
 PATTERN_CHARACTER_LENGTH = '10' # 11 for 5 character symbols like GOOGL
 CONTRACT_MULTIPLIER = 100
 TRADE_DATE_START = None
@@ -214,7 +214,7 @@ def main():
     # RESULTS
     # -------------------------
 
-    print(ATM_SPREAD + " PUT Credit Bear Spread Strategy for " + SYMBOL + " from Option Chain History from " + TRADE_DATE_START + " to " + TRADE_DATE_END )
+    print(ATM_SPREAD + " PUT Credit Bear Spread Close Strategy for " + SYMBOL + " from Option Chain History from " + TRADE_DATE_START + " to " + TRADE_DATE_END )
     print("Total Trades:", len(premiums_df))
     print("Total PnL:", premiums_df["net"].sum())
 
